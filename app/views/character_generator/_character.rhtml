@@ -1,0 +1,86 @@
+<div class="pdf_link" >
+    <%= link_to "Create a PDF", {:action => "pdf" } %>
+</div>
+
+<div class="left_column">
+    <p>Name: <%= in_place_editor_field :character, :name %></p>
+    <form>
+        <table>
+            <tr>
+                <td>Race:</td>
+                <td>
+        <%= select_tag "select_character_race", 
+            options_for_select(character.get_eligible_races, character.race) %>
+    
+        <%= observe_field "select_character_race", 
+            :url => { :action => "set_character_race" },
+            :with => "'race=' + encodeURIComponent(value)" %>
+                </td>
+            </tr>
+         </table>
+    </form>
+       
+    
+    <form>
+        <table>
+            <tr>
+                <td>Class:</td>
+                <td>
+            
+        <%= select_tag "select_character_profession", 
+            options_for_select(character.get_eligible_professions, character.profession) %>
+    
+        <%= observe_field "select_character_profession", 
+            :url => { :action => "set_character_profession" },
+            :with => "'profession=' + encodeURIComponent(value)" %>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <div id="ability_scores">
+        <p>STR: <%= character.strength %> <%= character.attr_modifier(character.strength) %></p>
+        <p>INT: <%= character.intelligence %> <%= character.attr_modifier(character.intelligence) %></p>
+        <p>WIS: <%= character.wisdom %> <%= character.attr_modifier(character.wisdom) %></p>
+        <p>DEX: <%= character.dexterity %> <%= character.attr_modifier(character.dexterity) %></p>
+        <p>CON: <%= character.constitution %> <%= character.attr_modifier(character.constitution) %></p>
+        <p>CHR: <%= character.charisma %> <%= character.attr_modifier(character.charisma) %></p>
+    </div>
+    
+    <%= render(:partial => "equipment", :object => @character.equipment) %>
+
+</div>
+
+<div class="right_column">
+    <p>Level 1: XP 0 (<%= character.getExperienceNeededFor2ndLevel() %>)</p>
+    
+    <%= render(:partial => "armor_class", :object => @character.armor_class) %>
+    
+    <p>Hit Points: <%= in_place_editor_field :character, :hit_points %></p>
+    <p>Attack Bonus: +1</p>
+    
+    <%= render(:partial => "money", :object => @character.money) %>
+    <%= render(:partial => "encumbrance", 
+        :object => @character.encumbrance,
+        :locals => { :load_category => @character.load_category }) %>
+    
+    <div class="saving_throws">
+        <p>Saving Throws:
+        <% character.get_saving_throws.each do |k,v| %>
+            <span class="saving_throw"><p><%= h(k) %>: <%= h(v) %></p></span>
+        <% end %>
+    </div>
+    
+    <div class="special_abilities" />
+        <p>Special Abilities:</p>
+        <% character.get_special_abilities.each do |k,v| %>
+            <span class="special_ability"><p><%= h(k) %></p>
+                <% v.each do |name, detail| %>
+                    <span class="special_ability_detail"><p><%= h(name) %>: <%= h(detail) %><p></span>
+                <% end %>
+            </span>
+        <% end %>
+    </div>
+</div>
+<div class="clearer">&nbsp;</div>
+

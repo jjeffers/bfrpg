@@ -1,0 +1,11 @@
+human:
+    name: "Human"
+    
+dwarf:
+    name: "Dwarf"
+    
+elf:
+    name: "Elf"
+    
+halfling:
+    name: "Halfling"

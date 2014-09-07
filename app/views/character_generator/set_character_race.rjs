@@ -1,0 +1,2 @@
+page.replace_html("character", :partial => "character", :object => @character)
+page[:character].visual_effect :highlight

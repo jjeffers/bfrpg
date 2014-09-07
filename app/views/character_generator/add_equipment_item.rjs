@@ -1,0 +1,9 @@
+page.replace("equipment", :partial => "equipment", :object => @character.equipment)
+page.replace("money", :partial => "money", :object => @character.money)
+page.replace("armor_class", :partial => "armor_class", :object => @character.armor_class)
+page.replace("encumbrance", :partial => "encumbrance", 
+    :object => @character.encumbrance,
+    :locals => { :load_category => @character.load_category })
+page[:equipment].visual_effect :highlight
+page[:money].visual_effect :highlight
+page[:encumbrance].visual_effect :highlight

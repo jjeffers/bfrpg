@@ -1,0 +1,14 @@
+<tr>
+    <td width="5%" >
+        <%= equipment_item.quantity %>&times;</td>
+    <td>
+        <%= link_to_remote equipment_item.name, :url => { 
+            :action => :remove_equipment_item, 
+            :name => equipment_item.name,
+            :cost => equipment_item.cost,
+            :weight => equipment_item.weight,
+            :html_options => { :alt => "Click to remove one of these items." }} %>
+    </td>
+    <td><%= equipment_item.cost * equipment_item.quantity %>gp</td>
+    <td><%= equipment_item.weight * equipment_item.quantity %> lbs</td>
+</tr>

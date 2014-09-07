@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Basic Fantasy RPG Character Generator</title>
+        <%= stylesheet_link_tag "bfrpg", :media => "all" %>
+        <%= javascript_include_tag :defaults %>
+    </head>
+    <body>
+        <div id="generator">
+            <div id="main">
+                <%= yield :layout %>
+            </div>
+            <div id="character" class="character">
+                <% if @character != nil %>
+                    <%= render(:partial => "character", :object => @character) %>
+                <% end %>
+            </div>
+        </div>
+        <div class="clearer">&nbsp;</div>
+        <div class="copyrights">
+            <p><b><i><a href="http://basicfantasy.org/main.html">Basic Fantasy RPG</a></i></b> is Copyright © 2006-2007 Chris Gonnerman.</p>
+            <p><a href="mailto:dm@bfrpg.lincolnswar.com">Comments? Suggestions? Requests?</p>
+        </div>
+    </body>
+</html>

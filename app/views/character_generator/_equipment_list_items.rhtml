@@ -1,0 +1,7 @@
+<ul class="equipment_list">
+<% for equipment_item in @equipment_list_items do -%>
+  <li class="equipment_item" id="<%= equipment_item.id %>" >
+    <span class="equipment_description">"<%= equipment_item.name %>", <%= equipment_item.cost %>, <%= equipment_item.weight %></span>
+  </li>
+<% end -%>
+</ul>

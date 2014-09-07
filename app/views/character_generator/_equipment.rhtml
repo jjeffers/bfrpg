@@ -1,0 +1,15 @@
+<div class="equipment" id="equipment">
+    <p>Equipment:</p>
+    <table class="equipment">
+        <%= render(:partial => "equipment_item", :collection => equipment) %>
+        <tr>
+            <td colspan="4">
+                <% form_remote_tag :url => { :action => :add_equipment_item, 
+                    :name => :equipment_item_name } do %>
+                    <%= text_field_with_auto_complete :equipment_item, :name %>
+                    
+                <% end %>
+            </td>
+        </tr>
+    </table>
+</div>

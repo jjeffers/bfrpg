@@ -1,0 +1,308 @@
+backpack:
+    name: "backpack"
+    cost: 4
+    weight: 0.1
+    
+candles:
+    name: "candles, 12"
+    cost: 1
+    weight: 0.1
+    
+chalk:
+    name: "chalk, small bag of pieces"
+    cost: 2
+    weight: 0.1
+    
+clothing:
+    name: "clothing, common outfit"
+    cost: 4
+    weight: 1
+
+glass_bottle:
+    name: "glass bottle or vial"
+    cost: 1
+    weight: 0.1
+    
+grappling_hook:
+    name: "grappling hook"
+    cost: 2
+    weight: 4
+    
+holy_symbol:
+    name: "holy symbol"
+    cost: 25
+    weight: 0.1
+    
+holy_water:
+    name: "holy water, per vial"
+    cost: 10
+    weight: 0.1
+    
+iron_spikes:
+    name: "iron spikes, 12"
+    cost: 12
+    weight: 1
+    
+ladder:
+    name: "ladder, 10ft"
+    cost: 1
+    weight: 20
+    
+lantern:
+    name: "lantern, hooded"
+    cost: 8
+    weight: 2
+    
+map:
+    name: "map or scroll case"
+    cost: 1
+    weight: 0.5
+    
+mirror:
+    name: "mirror, small metal"
+    cost: 7
+    weight: 0.1
+    
+oil:
+    name: "oil, per flask"
+    cost: 1
+    weight: 1
+    
+paper:
+    name: "paper, per sheet"
+    cost: 1
+    weight: 0.01
+    
+pole:
+    name: "pole, 10ft wooden"
+    cost: 1
+    weight: 10
+    
+quiver:
+    name: "quiver or bolt case"
+    cost: 1
+    weight: 1
+    
+rations:
+    name: "rations, dry, one week"
+    cost: 10
+    weight: 14
+    
+rope:
+    name: "rope, help, per 50ft"
+    cost: 1
+    weight: 5
+    
+silk_rope:
+    name: "rope, silk, per 50ft"
+    cost: 10
+    weight: 2
+    
+large_sack:
+    name: "sack, large"
+    cost: 1
+    weight: 0.1
+    
+small_sack:
+    name: "sack, small"
+    cost: 0.5
+    weight: 0.1
+    
+large_tent:
+    name: "tent, large (10 men)"
+    cost: 25
+    weight: 20
+    
+tent: 
+    name: "tent, small (1 man)"
+    cost: 5
+    weight: 10
+    
+thieves_tools:
+    name: "thieves' picks and tools"
+    cost: 25
+    weight: 1
+    
+tinderbox:
+    name: "tinder box, flint and steel"
+    cost: 3
+    weight: 1
+    
+torches:
+    name: "torches, 6"
+    cost: 1
+    weight: 1
+    
+whetstone:
+    name: 1
+    weight: 1
+    
+wineskin:
+    name: "wineskin or waterskin"
+    cost: 1
+    weight: 2
+    
+blanket:
+    name: "winter blanket"
+    cost: 1
+    weight: 3
+    
+ink:
+    name: "writing ink, per vial"
+    cost: 8
+    weight: 0.1
+    
+leather_armor:
+    name: "leather armor"
+    cost: 20
+    weight: 15
+    
+chain_mail:
+    name: "chain mail"
+    cost: 60
+    weight: 40
+    
+plate_mail:
+    name: "plate_mail"
+    cost: 300
+    weight: 50
+    
+shield:
+    name: "shield"
+    cost: 7
+    weight: 5
+    
+hand_axe:
+    name: "hand axe"
+    cost: 4
+    weight: 5
+    
+batle_axe:
+    name: "battle axe"
+    cost: 7
+    weight: 7
+    
+great_axe:
+    name: "great axe"
+    cost: 14
+    weight: 15
+    
+shortbow:
+    name: "shortbow"
+    cost: 25
+    weight: 2
+    
+shortbow_arrow:
+    name: "shortbow arrow"
+    cost: 0.1
+    weight: 0.1
+
+shortbow_silver_arrow:
+    name: "shortbow silver arrow"
+    cost: 2
+    weight: 0.1
+
+longbow:
+    name: "longbow"
+    cost: 60
+    weight: 3
+    
+longbow_arrow:
+    name: "longbow arrow"
+    cost: 0.2
+    weight: 0.1
+
+longbow_silver_arrow:
+    name: "longbow silver arrow"
+    cost: 4
+    weight: 0.1
+    
+light_crossbow:
+    name: "light crossbow"
+    cost: 30
+    weight: 7
+    
+light_crossbow_quarrel:
+    name: "light crossbow quarrel"
+    cost: 0.2
+    weight: 0.1
+    
+light_crossbow_silver_quarrel:
+    name: "light crossbow silver quarrel"
+    cost: 5
+    weight: 0.1
+    
+heavy_crossbow:
+    name: "heavy crossbow"
+    cost: 50
+    weight: 14
+    
+heavy_crossbow_quarrel:
+    name: "heavy crossbow quarrel"
+    cost: 0.4
+    weight: 0.1
+    
+heavy_crossbow_silver_quarrel:
+    name: "heavy crossbow silver quarrel"
+    cost: 10
+    weight: 0.1
+    
+dagger:
+    name: "dagger"
+    cost: 2
+    weight: 1
+    
+siver_dagger:
+    name: "siver dagger"
+    cost: 25
+    weight: 1
+    
+shortsword:
+    name: "shortsword"
+    cost: 6
+    weight: 3
+    
+longsword:
+    name: "longsword or scimitar"
+    cost: 10
+    weight: 4
+    
+claymore:
+    name: "two-handed sword"
+    cost: 18
+    weight: 10
+    
+club:
+    name: "club, cludgel or walking staff"
+    cost: 2
+    weight: 1
+    
+quarterstaff:
+    name: "quarterstaff"
+    cost: 2
+    weight: 4
+    
+polearm:
+    name: "pole arm"
+    cost: 9
+    weight: 15
+    
+sling:
+    name: "sling"
+    cost: 1
+    weight: 0.1
+    
+bullet:
+    name: "bullet"
+    cost: 0.1
+    weight: 0.1
+    
+stone:
+    name: "stone"
+    cost: 0
+    weight: 0.1
+    
+spear:
+    name: "spear"
+    cost: 5
+    weight: 5
