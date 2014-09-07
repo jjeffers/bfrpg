@@ -1,5 +1,3 @@
-require "pdf"
-require "parse_csv"
 
 class CharacterGeneratorController < ApplicationController
  
