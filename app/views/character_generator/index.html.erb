@@ -1,7 +1,7 @@
 <h1>Basic Fantasy RPG Character Generator</h1>
 
 <div class="new_character_link" >
-    <%= link_to_remote "Generate a New Character!", 
-        :url => { :action => :make_new_character } %>
+    <%= link_to("Generate a New Character!", 
+        :url => { :action => :make_new_character }, :remote => true) %>
 </div>
 
