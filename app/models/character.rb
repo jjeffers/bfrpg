@@ -222,13 +222,13 @@ class Character
     
     def rollAbilityScores
 
-      @strength = Die.roll 3,6
-      @intelligence = Die.roll 3, 6
-      @wisdom = Die.roll 3, 6
-      @dexterity = Die.roll 3, 6
-      @constitution = Die.roll 3, 6
-      @charisma = Die.roll 3, 6
-      @money = (Die.roll 3, 6) * 10
+      @strength = Die.total("3d6")
+      @intelligence = Die.total("3d6")
+      @wisdom = Die.total("3d6")
+      @dexterity = Die.total("3d6")
+      @constitution = Die.total("3d6")
+      @charisma = Die.total("3d6")
+      @money = Die.total("3d6") * 10
       
     end
 
@@ -323,7 +323,7 @@ class Character
              hp = Die.roll 1, 6
          
          elsif @profession == "Fighter"
-             hp = Die.roll 1, 8
+             hp = Die.total("1d8")
          end
 
          if @constitution == 3

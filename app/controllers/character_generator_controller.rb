@@ -2,8 +2,11 @@
 class CharacterGeneratorController < ApplicationController
  
   def index
-      @character = find_character
-      
+    @character = find_character 
+  end
+
+  def show
+    @character = find_character
   end
 
   def auto_complete_for_equipment_item_name
@@ -58,16 +61,8 @@ class CharacterGeneratorController < ApplicationController
       
   end
   
-  def make_new_character
-      @character = Character.new
-
-      @character.name = "Morgan Ironwolf"
-      @character.race = "Human"
-      @character.profession = "Fighter"
-      @character.rollAbilityScores()
-            
-      session[:character] = @character
-      update_character_stats()
+  def new
+      
   end
 
   def set_character_name
@@ -120,8 +115,6 @@ class CharacterGeneratorController < ApplicationController
   end
 
   def update_character_stats
-      @character = find_character
-
       @character.hit_points = @character.rollHitPoints()
   end
 
@@ -142,9 +135,15 @@ class CharacterGeneratorController < ApplicationController
   end
 
   def find_character
-      unless session[:character]
-      end
-      session[:character]
+    @character = Character.new
+
+    @character.name = "Morgan Ironwolf"
+    @character.race = "Human"
+    @character.profession = "Fighter"
+    @character.rollAbilityScores()
+          
+    session[:character] = @character
+    update_character_stats()
   end
 
 end

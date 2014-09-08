@@ -10,5 +10,24 @@
 
 <%= yield %>
 
+ <body>
+        <div id="generator">
+            <div id="main">
+                <%= yield :layout %>
+            </div>
+            <div id="character" class="character">
+                <% if @character != nil %>
+                    <%= render(:partial => "character", :object => @character) %>
+                <% end %>
+            </div>
+        </div>
+        <div class="clearer">&nbsp;</div>
+        <div class="copyrights">
+            <p><b><i><a href="http://basicfantasy.org/main.html">Basic Fantasy RPG</a></i></b> is Copyright © 2006-2014 Chris Gonnerman.</p>
+            <p><a href="mailto:jamesj@codeprovidence.com">Comments? Suggestions? Requests?</p>
+        </div>
+    </body>
+
+
 </body>
 </html>
